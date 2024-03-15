@@ -28,8 +28,11 @@ describe("pop", function() {
     var removed = stack.pop();
     expect(removed).toBe(1000);
     expect(stack.size).toBe(2);
-    stack.pop();
-    stack.pop();
+    var removed2 = stack.pop();
+    expect(removed2).toBe(100);
+    expect(stack.size).toBe(1);
+    var removed3 = stack.pop();
+    expect(removed3).toBe(10);
     expect(stack.size).toBe(0);
   });
 

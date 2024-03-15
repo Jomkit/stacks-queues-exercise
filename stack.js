@@ -38,13 +38,13 @@ class Stack {
   pop() {
     if(this.first===null){throw new Error('Stack is empty')};
     let item;
-    if(this.first.next===null){
+    if(this.first.next==null){
       item = this.first;
       this.first = null;
       this.last = null;
     } else{
       item = this.first;
-      item.next = this.first;
+      this.first = item.next;
     }
     this.size -= 1;
     return item.val;
